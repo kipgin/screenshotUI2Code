@@ -1,0 +1,59 @@
+# ==========================================
+# Root & System Files
+# ==========================================
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Python & Backend (backend/)
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / unit tests cache
+.pytest_cache/
+
+# Local Environment Variables (Contains sensitive API keys, secrets)
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Dynamic / Generated directories (Only ignore contents, keep the directory)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+backend/workspaces/*
+!backend/workspaces/.gitkeep
+
+# ==========================================
+# Model Inference (model_inference/)
+# ==========================================
+
+model_inference/qwen2.5_coder_3b_openvino_int4/
+model_inference/qwen2.5_coder_7b_openvino_int4/
+model_inference/testing_infer/gemma-3-4b-it-int4-ov/
+
+
+model_inference/**/openvino*/
+model_inference/**/ov*/
+model_inference/**/*.bin
+model_inference/**/*.xml
+model_inference/**/*.onnx
+
+# Python bytecode inside model_inference
+model_inference/__pycache__/
+
+# ==========================================
+# Frontend (frontend/)
+# ==========================================
+
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/test-results/
+frontend/*.local

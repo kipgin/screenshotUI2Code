@@ -1,0 +1,12 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart
+pydantic>=2.0
+pydantic-settings
+python-dotenv
+openai>=1.30.0
+gitpython>=3.1.40
+httpx
+pytest
+pytest-asyncio
+httpx          # required by fastapi TestClient
