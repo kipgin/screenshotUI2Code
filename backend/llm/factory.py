@@ -6,6 +6,12 @@ from .base import BaseLLMClient
 from .config import LLMConfig
 
 
+_override_client: BaseLLMClient | None = None
+
+def set_llm_client_override(client: BaseLLMClient | None):
+    global _override_client
+    _override_client = client
+
 def get_llm_client(config: LLMConfig) -> BaseLLMClient:
     """Return a concrete BaseLLMClient for the given config.
 
@@ -18,6 +24,8 @@ def get_llm_client(config: LLMConfig) -> BaseLLMClient:
     Raises:
         ValueError: if config.provider is not recognized.
     """
+    if _override_client is not None:
+        return _override_client
     match config.provider:
         case "openai":
             from .openai_client import OpenAIClient
