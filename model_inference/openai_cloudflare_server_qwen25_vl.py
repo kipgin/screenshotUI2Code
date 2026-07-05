@@ -11,7 +11,7 @@ app = FastAPI(title="Cloudflare Qwen2.5-VL Proxy Server")
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-BASE_URL_CLOUDFLARE = "https://carry-promotes-spot-sheer.trycloudflare.com"
+BASE_URL_CLOUDFLARE = "https://webshots-somewhat-compared-hired.trycloudflare.com"
 CLOUDFLARE_V1 = f"{BASE_URL_CLOUDFLARE.rstrip('/')}/v1"
 MODEL_NAME = "Qwen/Qwen2.5-VL-3B-Instruct"
 
